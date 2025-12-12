@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  marimo:
+    image: marimo_js:latest
+    container_name: marimo
+    ports:
+      - "8081:8080"
+    volumes:
+      - /opt/portainer/data/marimo/data:/app/data
+      - /opt/portainer/data/marimo/config:/root/.config
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 2048M
+          cpus: '2'
+        reservations:
+          memory: 128M
+          cpus: '0.25'

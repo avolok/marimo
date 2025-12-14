@@ -21,3 +21,4 @@ services:
         reservations:
           memory: 128M
           cpus: '0.25'
+    pull_policy: build

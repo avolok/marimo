@@ -1,7 +1,7 @@
 services:
   app:
-    build:
-      context: .
+    # build:
+    #   context: .
     image: invoiceninja/invoiceninja-debian:latest
     restart: unless-stopped
     env_file:
